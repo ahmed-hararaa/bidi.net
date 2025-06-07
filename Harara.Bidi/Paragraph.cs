@@ -33,10 +33,10 @@ public class Paragraph {
   List<int> _indices = [];
 
   /// Original text.
-  private List<int> Text => _originalText;
+  public List<int> Text => _originalText;
 
   /// Bidi text.
-  public List<int> bidiText {
+  public List<int> BidiText {
     get
     {
       var ret = _bidiText.ToList();
@@ -374,10 +374,7 @@ public class Normalization {
       if (Text.Count > compPos)
       {
         diff = Text.Count - compPos;
-        for (var i = 0; i < diff; i++)
-        {
-          Text.RemoveAt(Text.Count - 1 - i);
-        }
+        Text.RemoveRange(Text.Count - 1 - diff, diff);
         return;
       }
       diff = compPos - Text.Count;

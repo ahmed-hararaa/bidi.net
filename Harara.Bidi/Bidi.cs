@@ -49,7 +49,7 @@ public partial class Bidi
         var paragraphs = BidiString.FromLogical(logicalString).Paragraphs;
         var sb = new List<int>();
         foreach (var p in paragraphs) {
-            sb.AddRange(p.bidiText);
+            sb.AddRange(p.BidiText);
         }
 
         return sb;
@@ -84,7 +84,7 @@ public partial class Bidi
 
         var sb = new List<int>();
         foreach (var p in paragraphs) {
-            sb.AddRange(p.bidiText);
+            sb.AddRange(p.BidiText);
             indexes.AddRange(p.indices);
         }
 
