@@ -3,22 +3,22 @@ using System.Net.Mime;
 namespace Harara.Bidi;
 
 /// Represents a paragraph in text.
-class Paragraph {
+public class Paragraph {
   /// Constructor.
   public Paragraph(List<int> text, int separator)
   {
     _separator = separator;
-    var n = Normalization.Decompose(text); 
+    N = Normalization.Decompose(text); 
     _originalText.Clear();
 
     if (text.Count > 0) {
       _originalText.AddRange(text);
     }
 
-    n.Compose();
+    N.Compose();
 
-    var embeddingLevel = Bidi.CalculateEmbeddingLevel(n);
-    RecalculateCharactersEmbeddingLevels(n, embeddingLevel);
+    var embeddingLevel = Bidi.CalculateEmbeddingLevel(N);
+    RecalculateCharactersEmbeddingLevels(N, embeddingLevel);
 
     RemoveBidiMarkers();
   }
@@ -28,7 +28,7 @@ class Paragraph {
   List<int> _bidiText = [];
 
   /// N
-  public Normalization n;
+  public Normalization N { get; }
 
   List<int> _indices = [];
 
@@ -248,7 +248,7 @@ class CharData {
 
 /// Contains a set of functions for bidi text
 /// normalization (decomposition and composition).
-class Normalization {
+public class Normalization {
   public Normalization(List<int> text,
     List<int> lengths,
     bool hasPersian,

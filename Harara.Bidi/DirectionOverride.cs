@@ -1,7 +1,7 @@
 namespace Harara.Bidi;
 
 /// Used to determine current letter direction (Table 2 in the Unicode BiDi algorithm).
-enum DirectionOverride {
+public enum DirectionOverride {
     /// No override is currently active.
     Neutral,
 

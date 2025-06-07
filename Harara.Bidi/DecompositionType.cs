@@ -3,7 +3,7 @@ namespace Harara.Bidi;
 
 
 /// The type of Unicode character decomposition.
-enum DecompositionType {
+public enum DecompositionType {
   // A base form or no special variant.
   // none,
 
@@ -61,7 +61,7 @@ public partial class Bidi
   
 
 /// Decomposition Types.
-private static readonly Dictionary<int, DecompositionType> DecompositionTypes =new(){
+public static readonly IReadOnlyDictionary<int, DecompositionType> DecompositionTypes = new Dictionary<int, DecompositionType>(){
   {8450, DecompositionType.Font},
   {8458, DecompositionType.Font},
   {8459, DecompositionType.Font},
@@ -2455,7 +2455,7 @@ private static readonly Dictionary<int, DecompositionType> DecompositionTypes =n
 };
 
 /// Gets the Unicode decomposition type.
-internal static DecompositionType? GetDecompositionType(int character) {
+public static DecompositionType? GetDecompositionType(int character) {
   if (DecompositionTypes.TryGetValue(character, out var type))
   {
     return type;

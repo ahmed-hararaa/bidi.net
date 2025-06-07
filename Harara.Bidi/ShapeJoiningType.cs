@@ -3,7 +3,7 @@ namespace Harara.Bidi;
 
 
 /// Letter joining types of Persian letters.
-enum ShapeJoiningType {
+public enum ShapeJoiningType {
   /// Right Joining
   Right,
 
@@ -26,7 +26,7 @@ enum ShapeJoiningType {
 public partial class Bidi
 {
   /// Get joining types of Persian letters.
- internal static ShapeJoiningType GetShapeJoiningType(int character) {
+ public static ShapeJoiningType GetShapeJoiningType(int character) {
   if (character >= 0x0600 && character <= 0x0605) {
     return ShapeJoiningType.NonJoining;
   }

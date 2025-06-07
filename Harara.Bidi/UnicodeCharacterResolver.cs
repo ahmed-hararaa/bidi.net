@@ -7029,7 +7029,7 @@ private static readonly Dictionary<String, int> _composeMapping = new(){
 };
 
 /// Gets the Unicode decomposition mapping.
-internal static List<int>? GetDecompositionMapping(int character)
+public static List<int>? GetDecompositionMapping(int character)
 {
     if (_decomMapping.TryGetValue(character, out var ints))
         return ints;
@@ -7050,7 +7050,7 @@ internal static void GetRecursiveDecomposition(bool canonical, int ch, List<int>
 }
 
 /// Composes a sequence.
-internal static int Compose(string sequence)
+public static int Compose(string sequence)
 {
     return _composeMapping.TryGetValue(sequence, out var value) ? value : 0xFFFF;
   

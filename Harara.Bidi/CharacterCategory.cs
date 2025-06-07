@@ -1,6 +1,6 @@
 namespace Harara.Bidi;
 
-internal enum CharacterCategory
+public enum CharacterCategory
 {
     /// <summary>
     /// Letter, Uppercase
@@ -155,7 +155,7 @@ internal enum CharacterCategory
 
 public partial class Bidi
 {
-    static readonly Dictionary<int, CharacterCategory> CharacterCategories = new(){
+    public static readonly IReadOnlyDictionary<int, CharacterCategory> CharacterCategories = new Dictionary<int, CharacterCategory>(){
   {65, CharacterCategory.Lu},
   {66, CharacterCategory.Lu},
   {67, CharacterCategory.Lu},

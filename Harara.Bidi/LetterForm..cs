@@ -1,7 +1,7 @@
 namespace Harara.Bidi;
 
 /// The four different available letter presentation forms.
-enum LetterForm {
+public enum LetterForm {
     /// A presentation form of a letter that begins a sequence of connected letters.
     Initial,
 

@@ -2,7 +2,7 @@ namespace Harara.Bidi;
 // ignore_for_file, constant_identifier_names
 
 /// The different canonical classes of Unicode characters.
-internal class CanonicalClass(int value) {
+class CanonicalClass(int value) {
   
   public int Value => value;
   

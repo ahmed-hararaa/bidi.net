@@ -4,6 +4,11 @@
         <TargetFramework>net8.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <PackageId>Harara.Bidi</PackageId>
+        <Version>1.0.0</Version>
+        <Authors>Ahmed Harara</Authors>
+        <Description>This project is a .NET C# port of the Unicode Bidirectional (BiDi) Algorithm originally implemented in bidi dart.</Description>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <RepositoryUrl>https://github.com/ahmed-hararaa/bidi.net</RepositoryUrl>
     </PropertyGroup>
-
 </Project>

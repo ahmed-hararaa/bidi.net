@@ -2,7 +2,7 @@ using Harara.Bidi;
 
 namespace Test;
 
-public class UnitTest1
+public class BidiTest
 {
     private static string FromCharCodes(List<int> codes)
     {

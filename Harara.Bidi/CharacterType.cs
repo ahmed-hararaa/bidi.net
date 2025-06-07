@@ -1,6 +1,6 @@
 namespace Harara.Bidi;
 /// Types of BiDi characters (Table 4 in the Unicode BiDi algorithm).
-internal enum CharacterType {
+public enum CharacterType {
   /// Left-to-Right
   Ltr,
 
@@ -74,7 +74,7 @@ internal enum CharacterType {
 public partial class Bidi
 {
 /// Character types.
-private static readonly Dictionary<int, CharacterType> CharacterTypes = new(){
+public static readonly IReadOnlyDictionary<int, CharacterType> CharacterTypes = new Dictionary<int, CharacterType>(){
   {0, CharacterType.Bn},
   {1, CharacterType.Bn},
   {2, CharacterType.Bn},
@@ -5932,7 +5932,7 @@ private static readonly Dictionary<int, CharacterType> CharacterTypes = new(){
 /// [character] A Unicode character for which to get the BiDi type.
 ///
 /// Returns the character bidi [CharacterType].
-internal static CharacterType GetCharacterType(int character)
+public static CharacterType GetCharacterType(int character)
 {
   return CharacterTypes.TryGetValue(character, out var type) ? type : CharacterType.Ltr;
 }

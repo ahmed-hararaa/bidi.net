@@ -1,6 +1,6 @@
 namespace Harara.Bidi;
 
-class BidiString {
+public class BidiString {
     private BidiString(List<Paragraph> paragraphs)
     {
         Paragraphs = paragraphs;

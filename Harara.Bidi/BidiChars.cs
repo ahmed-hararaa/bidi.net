@@ -1,7 +1,7 @@
 namespace Harara.Bidi;
 
 /// A set of common Unicode characters, including BiDi control characters, and some Persian letters used mainly for testing purposes.
-internal class BidiChars {
+class BidiChars {
   /// Right-to-Left Mark
   /// Right-to-left zero-width non-Persian character.
   // public const int RLM = 0x200F;
