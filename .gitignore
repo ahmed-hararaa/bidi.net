@@ -1,0 +1,88 @@
+## Ignore Visual Studio temporary files, build results, and
+## user-specific files
+
+# Build results
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+*.log
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Mono auto generated files
+mono_crash.*
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Visual Studio Code
+.vscode/
+
+# Rider
+.idea/
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# DotCover
+*.dotCover
+
+# Web stuff
+node_modules/
+bower_components/
+wwwroot/lib/
+
+# NuGet
+*.nupkg
+# The packages folder can be ignored because of PackageReference
+**/packages/*
+!**/packages/build/
+!**/packages/repositories.config
+*.snupkg
+
+# MSBuild Binary and Log Files
+*.exe
+*.dll
+*.pdb
+*.mdb
+*.cache
+*.dbmdl
+*.bak
+*.log
+*.vspscc
+*.vssscc
+*.vsp
+
+# Azure Pipelines
+.azure-pipelines/
+
+# Publish
+*.publish.xml
+publish/
+
+# .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+*.deps.json
+
+# Others
+*.tmp
+*.temp
+*.sdf
+*.sqlite
+*.sqlite3
+*.db
+
+# Resharper
+_ReSharper*/
+*.DotSettings.user
+
+# Visual Studio cache files
+.vs/
+
