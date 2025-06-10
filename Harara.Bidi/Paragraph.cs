@@ -374,7 +374,7 @@ public class Normalization {
       if (Text.Count > compPos)
       {
         diff = Text.Count - compPos;
-        Text.RemoveRange(Text.Count - 1 - diff, diff);
+        Text.RemoveRange(Text.Count - diff, diff);
         return;
       }
       diff = compPos - Text.Count;
